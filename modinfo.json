@@ -1,0 +1,33 @@
+{
+  "manifestVersion": 1,
+  "id": "kardagan.matter-logic",
+  "name": "Matter Logic",
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "entry": "main.js",
+  "description": "Adds a Matter Scanner that counts every element type in its 4x4 zone, plus a Condition Combinator that sums the scanners wired into it and turns those tallies into a 0/1 signal for the vanilla wire network.",
+  "author": "Kardagan",
+  "gameVersion": {
+    "minimum": "0.5.5"
+  },
+  "loadOrder": 0,
+  "configSchema": {
+    "scanIntervalMs": {
+      "type": "number",
+      "default": 250,
+      "min": 100,
+      "max": 1000,
+      "step": 50,
+      "label": "Scan interval (ms, takes effect on restart)",
+      "labelKey": "mods|matterLogic|config|scanInterval",
+      "description": "How often scanners re-count their zone and combinators re-evaluate.",
+      "descriptionKey": "mods|matterLogic|config|scanIntervalDescription"
+    },
+    "showZoneOverlay": {
+      "type": "boolean",
+      "default": true,
+      "label": "Show live readings in the panel",
+      "labelKey": "mods|matterLogic|config|showReadings"
+    }
+  }
+}
